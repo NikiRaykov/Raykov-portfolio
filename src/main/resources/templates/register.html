@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>\
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+	
+    <header th:replace="/fragments/commons :: nav"></header>
+
+    <form class="register" th:action="@{/users/register}" th:method="post" th:object="${userRegisterBindingModel}">
+        <div class="form-group">
+            <div  class="label-holder textCol d-flex justify-content-center">
+                <label for="username" class="username">Username</label>
+            </div>
+            <input th:field="*{username}" th:errorclass="bg-danger" type="text" class="form-control" id="username" name="username" />
+            <small th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="text-danger">Username error message</small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="email" class="email">Email</label>
+            </div>
+            <input th:field="*{email}"
+                   th:errorclass="bg-danger" type="email"
+                   class="form-control"
+                   id="email"
+                   name="email" />
+            <small th:if="${#fields.hasErrors('email')}"
+                   th:errors="*{email}" class="text-danger">Email error message</small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="budget" class="budget">Budget</label>
+            </div>
+            <input th:field="*{budget}" th:errorclass="bg-danger" type="number" class="form-control" id="budget" name="budget" />
+            <small th:if="${#fields.hasErrors('budget')}"
+                   th:errors="*{budget}" class="text-danger">Budget error message</small>
+        </div>
+
+
+        <div class="form-group">
+            <div class="label-holder">
+                <label  for="password" class="password" >Password</label>
+            </div>
+            <input th:field="*{password}" th:errorclass="bg-danger" type="password" class="form-control" id="password" name="password" />
+            <small th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger">Password error message</small>
+        </div>
+
+    <div class="form-group">
+        <div class="label-holder text-white textCol d-flex justify-content-center">
+            <label for="confirmPassword" class="confirm">Confirm Password</label>
+        </div>
+        <input type="password" class="form-control" id="confirmPassword"
+               name="confirmPassword" />
+    </div>
+
+    <div class="button-holder d-flex justify-content-center">
+        <button type="submit" class="registerbtn" value="Register">Register</button>
+    </div>
+    </form>
+  </body>
+</html>

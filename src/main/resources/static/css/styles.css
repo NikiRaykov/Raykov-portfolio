@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&family=Poppins:wght@100&display=swap');
+
+body {
+    background-color: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header ul {
+    display: flex;
+    padding: 10px 10px 50px 10px; 
+}
+
+li {
+    list-style: none;
+    margin: 5px 10px;
+}
+
+
+.subtitle {
+    font-size: 50px;
+}
+
+h2 {
+    margin: 3px;
+    font-weight: 300;
+    
+}
+
+h1 {
+    font-size: 160px;
+    font-weight: 700;
+    margin: 0;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hero-section {
+    margin-top: 17vh;
+    text-align: center;
+}
+
+.light-text {
+    font-weight: 100;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.options {
+    display: flex;
+}
+
+.options a {
+    margin: 20px 10px;
+}
+
+footer ul {
+    display: flex;
+    padding: 30px;
+   
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.socials {
+    width: 100px;
+    height: 320px;
+    background-color: rgb(207, 159, 255);
+    border-radius: 30px 0 0 30px;
+    position: fixed;
+    right: 0;
+    top: 26vh;
+}
+
+@media only screen and(max-width: 600px) {
+    .socials {
+        display: none;
+        
+    }
+}
+
+.social {
+    width: 100%;
+    height: 33%;
+}
+
+.wave {
+    fill:   rgb(0, 0 , 0);
+    width: 100vw;
+    height: 65hv;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.social svg {
+    fill: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: rgb(128,0,0);
+}
+
+
+ /* work page */ 
+
+.work-details {
+    width: 50%;
+
+}
+
+.work-details td {
+    padding: 30px;
+}
+
+@media only screen and(max-width: 600px) {
+    .work-details {
+        width: 80%;
+    }
+
+    td {
+        padding: 5px;
+    }
+}
+
+.sub-pages-footer {
+    position: relative;
+}
+
+.about-me {
+    width: 50%;
+    text-align: center;
+}
+
+.about-me img {
+    border-radius: 50%;
+    height: 200px;
+    margin: 40px 10px 10px 10px;
+}
+
+ /*contact*/
+
+.form-submit {
+    width: 50%;
+
+ }
+
+ .form-submit form {
+    width: 100%;
+ }
+
+ .form-submit .form-row {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .form-row .form-control {
+    width: 50%;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px 0px; 
+ }
+
+ .form-row .form-control:focus,
+ .form-submit textarea:focus {
+    outline: 0;
+    background-color: lightblue
+ }
+
+.form-submit textarea {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    border: none;
+    padding: 0;
+    resize: none;
+    margin-top: 5px;
+    font-size: 20px; 
+    padding: 20px 0px;   
+} 
+
+form button {
+    width: 100%;
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 15px;
+}
+
+@media only screen and(max-width: 600px) {
+   .form-submit .form-row {
+        display: flex;
+        flex-direction: column;
+   }
+
+   .form-row .form-control {
+        width: 100%;
+        margin-top: 5px;
+   }
+}
+
+/*register*/
+
+.text-danger {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.label-holder {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 35px;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1%;
+    height: 30px;
+    border-radius: 0;
+}
+
+.label-holder {
+    padding-bottom: 0.5%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.registerbtn {
+    display: flex;
+    background-color: #70196d;
+    color: white;
+    margin-bottom: 5%;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.loginbtn {
+    display: flex;
+    background-color: #70196d;
+    color: white;
+    margin-bottom: 5%;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.form-control {
+    width: 500px;
+    margin: auto;
+    display: block;
+
+}
+
+.text-danger {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    justify-content: center;
+    display: flex;
+}
+
+.login {
+    text-align: center;
+}
+
+.register {
+    text-align: center;
+}
+
+.addbtn {
+    display: flex;
+    background-color: #70196d;
+    color: white;
+    margin-bottom: 5%;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.browser {
+    width: 500px;
+    margin: auto;
+    display: block;
+    height: 30px;
+}

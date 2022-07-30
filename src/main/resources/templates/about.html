@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="/css/styles.css"></link>
+</head>
+<body>
+    <header th:replace="/fragments/commons :: nav"></header>
+
+    <section>
+        <h2 class="subtitle">about</h2>
+
+        <div class="about-me">
+            <img src="/static/img/me2.jpg" alt="Niki Raykov">
+            <p>Hi, my name is Niki Raykov and I am currently a Software Developer Student in SoftUni!
+                All the lectors are amazing, the content is very well presented. I am very interested in sports and learning new things!
+            </p>
+        </div>
+
+       
+    </section>
+    <footer th:replace="fragments/commons :: footer"></footer>
+</body>
+</html>

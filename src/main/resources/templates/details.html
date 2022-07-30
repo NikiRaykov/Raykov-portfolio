@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Details</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/styles.css"/>
+    </head>
+    <body>
+    <header th:replace="/fragments/commons :: nav"></header>
+
+        <div class="container-fluid bg-dark w-25 m-auto ">
+            <div class="row justify-content-center ">
+                <div th:o#object="${product}" class="card" style="width: 18rem;">
+                    <div class="card-body bg-gray align-content-center text-center">
+                        <h6 th:text="*{name}">Service name</h6>
+                        <p class="card-text" th:text="*{description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi enim, excepturi ha </p>
+                        <h6 th:text="*{price}">Price</h6>
+                        <a class="btn btn-danger" th:href="@{/products/delete/{id}(id = *{id})}">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>   

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="icon" type="image/x-icon" href="/img/fav.png"/>
+</head>
+<body>
+<header th:fragment="nav">
+    <ul>
+        <th:block sec:authorize="!isAnonymous()">
+
+            <li>
+                <a class="nav-link text-white active h5" href="/products/add">Add Product</a>
+            </li>
+
+            <li>
+                <a class="nav-link text-white active h5" href="/users/contact">Contact</a>
+            </li>
+            <li>
+                <a class="nav-link text-white active h5" href="/users/logout">Logout</a>
+            </li>
+
+            <li class="li" sec:authorize="isAuthenticated()">
+                <div>
+                    <span style="font-size: 30px">Welcome, <th:block th:text="${#authentication.name}">X</th:block></span>
+                </div>
+            </li>
+        </th:block>
+
+        <th:block sec:authorize="isAnonymous()">
+            <li>
+                <a class="nav-link text-white active h5" href="/">Home</a>
+            </li>
+            <li>
+                <a class="nav-link text-white active h5" href="/users/register">Register</a>
+            </li>
+            <li>
+                <a class="nav-link text-white active h5" href="/users/login">Login</a>
+            </li>
+        </th:block>
+    </ul>
+</header>
+
+<footer th:fragment="footer">
+    <h2>Software Web developer</h2>
+    <div class="options">
+        <li>
+            <a class="nav-link text-white active h5" href="/users/work">WORK</a>
+        </li>
+
+        <li>
+            <a class="nav-link text-white active h5" href="/users/about">ME</a>
+        </li>
+        <li>
+            <a class="nav-link text-white active h5" href="/users/stack">STACK</a>
+        </li>
+    </div>
+    <ul>
+        <a href="https://www.facebook.com/profile.php?id=100002554089252">
+            <li>Facebook</li>
+        </a>
+        <a href="https://github.com/NikiRaykov">
+            <li>GitHub</li>
+        </a>
+        <a href="https://www.linkedin.com/in/niki-raykov-05a83720b/">
+            <li>LinkedIn</li>
+        </a>
+    </ul>
+</footer>
+</body>
+</html>
